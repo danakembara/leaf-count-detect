@@ -47,7 +47,7 @@ The training of three models (AlexNet, pre-trained ResNet18, and pre-trained Res
   <br>
   <img width="700" alt="image" src="https://github.com/user-attachments/assets/7665a469-b82e-4a04-864c-7dc3f9b8eb67">
   <br>
-  <img width="425" alt="image" src="https://github.com/user-attachments/assets/6e74c36f-82f9-426a-933c-1a34602645f2">
+  <img width="400" alt="image" src="https://github.com/user-attachments/assets/6e74c36f-82f9-426a-933c-1a34602645f2">
 </p>
 
 Results from Table 1 demonstrate that AlexNet achieved the best performance using the augmented dataset with r = 0.76, showing an improvement over AlexNet trained on the original dataset with r = 0.74. This enhancement can be attributed to the effective application of data augmentation techniques. Previous studies by [1] using the LSC and LCC datasets also reported a similar improvement of 2% after employing data augmentation. However, it is important to note that the effectiveness of data augmentation can be context-specific. For instance, Table 1 reveals that ResNet50 performed better with the original dataset than with the augmented one. According to [1], while data augmentation generally enhances model generalization, its impact can vary based on the model's characteristics and dataset specifics. Nevertheless, our observation also indicates that ResNet50 trained with the augmented dataset converges faster, as shown in Figure 2. When considering inference time along with performance metrics, using augmented data proves advantageous over the original dataset.  
