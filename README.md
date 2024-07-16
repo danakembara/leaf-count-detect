@@ -59,9 +59,9 @@ In conclusion, our study employed various CNN models for leaf counting and found
 ### Task 2: Leaf Detection
 The training of various models (ObjectDetectorMultiScale, pre-trained ResNet18, ResNet34, VGG16) and their experiments were conducted using Python 3.6 and PyTorch on Google Colab. The training process took between 1 to 1.5 hours to converge. Data augmentation played a crucial role in improving Average Precision (AP) scores for models trained on small datasets. Authors in [2] proposed a data augmentation method that preserved the photorealistic appearance of plant leaves, which we implemented in our methods. 
 <p align="center">
-  <img width="455" alt="image" src="https://github.com/user-attachments/assets/3696af08-6e78-4192-8c36-93e8d991613d">
+  <img width="750" alt="image" src="https://github.com/user-attachments/assets/3696af08-6e78-4192-8c36-93e8d991613d">
   <br>
-  <img width="442" alt="image" src="https://github.com/user-attachments/assets/5fb6b9a7-05f6-4c41-ad72-e38efb92bc2f">
+  <img width="500" alt="image" src="https://github.com/user-attachments/assets/5fb6b9a7-05f6-4c41-ad72-e38efb92bc2f">
   <br>
   <img width="368" alt="image" src="https://github.com/user-attachments/assets/eed8ff19-05d6-4aad-b80c-4e4521e58ab4">
   <br>
