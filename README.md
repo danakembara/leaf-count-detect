@@ -4,24 +4,24 @@ Wageningen University
 ![image](https://github.com/user-attachments/assets/dc47b632-9e38-41ce-941c-2f0d9f36f82a)
 
 ## Introduction
-Plant phenotype is a set of observable characteristics resulting from interactions between gene expression and the environment. Accurate and efficient monitoring of plant phenotype is essential for intelligent production in plant cultivation, which leads to better decision-making resulting in a higher yield. Traditional plant monitoring still uses manual measurement to analyze phenotypes, which are labor-intensive, time-consuming, and biased toward the observer. A better approach is to use image-based plant phenotyping using deep learning that allows distant observation and reduces the effects of manual interference. Convolutional neural network (CNN)-based methods have commonly been applied to plant phenotyping. Related works are from [1] that used CNN for leaf counting, and [2][3] that used CNN for leaf detection.
-  
-In this project, we will use datasets from Leaf Counting Challenge (LCC) and Leaf Segmentation Challenge (LSC) as input to do the two tasks, leaf counting and leaf detection. The architectures that we use are ObjectDetectorMultiScale, AlexNet, pre-trained ResNet18, pre-trained ResNet34, pre-trained ResNet50, and VGG16 to be compared and evaluate their performances. We also implemented some experiments with data augmentation, a variation of hyperparameters, and Freezing Weights (FW), to make the architectures more robust and get the best performance for both tasks. Lastly, we compare the performance with existing results from papers.
+Plant phenotype refers to the set of observable characteristics resulting from interactions between gene expression and the environment. Accurate and efficient monitoring of plant phenotypes is essential for intelligent production in plant cultivation, leading to better decision-making and higher yields. Traditional plant monitoring relies on manual measurements to analyze phenotypes, which are labor-intensive, time-consuming, and subject to observer bias. A better approach is to use image-based plant phenotyping with deep learning, allowing remote observation and reducing the effects of manual interference. Convolutional neural network (CNN)-based methods have been commonly applied to plant phenotyping, with related works such as [1] which used CNN for leaf counting, and [2][3] which used CNN for leaf detection.
+
+In this project, we will use datasets from the Leaf Counting Challenge (LCC) and the Leaf Segmentation Challenge (LSC) to perform two tasks: leaf counting and leaf detection. We will compare and evaluate the performance of several architectures, including ObjectDetectorMultiScale, AlexNet, pre-trained ResNet18, pre-trained ResNet34, pre-trained ResNet50, and VGG16. Additionally, we will conduct experiments with data augmentation, varying hyperparameters, and Freezing Weights (FW) to enhance the robustness of the architectures and achieve the best performance for both tasks. Finally, we will compare our results with existing results from the literature.
 
 ## Methods
 ### Dataset
-Our source of datasets is ‘Ara2012’ and ‘Ara2013-Canon’ sets from the Leaf Segmentation Challenge (LSC) and Leaf Counting Challenge (LCC) that contain top-down images of Arabidopsis plants and ground-truth annotations. One of the main challenges is we don’t have enough data to train on. The original dataset only contains roughly 150 images for the training set and 50 for the test set. We use the data augmentation technique to increase our dataset artificially to avoid overfitting. The augmented dataset is made by: 
--	Randomly cropping an area of 70% to 90% of the original size, and the ratio of width to height of the region is randomly selected from between 1 and 2.
--	Randomly change the brightness and saturation of the image to a value between 80% to 90% with a contrast of 150% of the original images.
--	A horizontal flip is applied with a 50% probability.
+Our datasets are sourced from the ‘Ara2012’ and ‘Ara2013-Canon’ sets from the Leaf Segmentation Challenge (LSC) and Leaf Counting Challenge (LCC), which contain top-down images of Arabidopsis plants along with ground-truth annotations. One of the main challenges we face is the limited amount of data available for training. The original dataset contains roughly 150 images for the training set and 50 for the test set. To address this issue and avoid overfitting, we employ data augmentation techniques to artificially increase our dataset. The augmented dataset is created by:
+- Randomly cropping an area of 70% to 90% of the original size, with the ratio of width to height of the region randomly selected between 1 and 2
+- Randomly changing the brightness and saturation of the image to a value between 80% and 90%, with a contrast adjustment of up to 150% of the original images
+- Applying a horizontal flip with a 50% probability
 
 ### Task 1: Leaf Counting
-For the leaf counting task, we developed a CNN regression network using convolutional layers, pooling layers, and fully connected layers in the end and trained it on the training set. We use three different networks to compare: 
--	AlexNet using hyperparameters batch size = 256, image size = 128, learning rate = 10-4, and epochs = 35 
--	Fine-tuning the pre-trained ResNet18 using hyperparameters batch size = 256, image size = 128, learning rate = 5x10-5, and epochs = 50
--	Fine-tuning the pre-trained ResNet50 using hyperparameters batch size = 256, image size = 128, learning rate = 5x10-5, and epochs = 50
+For the leaf counting task, we developed a CNN regression network using convolutional layers, pooling layers, and fully connected layers at the end, and trained it on the training set. We use three different networks for comparison:
+- AlexNet with hyperparameters: batch size = 256, image size = 128, learning rate = 10^-4, and epochs = 35
+- Fine-tuned ResNet18 with hyperparameters: batch size = 256, image size = 128, learning rate = 5x10^-5, and epochs = 50
+- Fine-tuned ResNet50 with hyperparameters: batch size = 256, image size = 128, learning rate = 5x10^-5, and epochs = 50
 
-We also define Mean Squared Error (MSE) as the loss function and Adam as the optimizer. As this is a regression task, the performance of these models is evaluated by calculating its Pearson correlation coefficient (r) on the test set. The closer the value is to 1 or -1, the closer the network predictions are to the ground truth.
+We define Mean Squared Error (MSE) as the loss function and use Adam as the optimizer. As this is a regression task, the performance of these models is evaluated by calculating their Pearson correlation coefficient (r) on the test set. The closer the value is to 1 or -1, the closer the network predictions are to the ground truth.
 
 ### Task 2: Leaf Detection
 For the leaf detection task, we developed a CNN based trained it on the training set. We use four different networks to compare: 
@@ -35,6 +35,20 @@ o	A simple object detector called ObjectDetectorMultiScale using hyperparameters
 o	ResNet18 using hyperparameters batch size = 32, image size = 128, learning rate = 10-4, epochs = 35, and weight decay = 10-4. We implement the model with and without freezing weights (FW).
 o	ResNet34 using hyperparameters batch size = 32, image size = 128, learning rate = 10-4, epochs = 35, and weight decay = 10-4. We implement the model with and without freezing weights (FW).
 o	VGG16 using hyperparameters batch size = 32, image size = 128, learning rate = 10-4, epochs = 35, and weight decay = 10-4. We implement the model with and without freezing weights (FW).
+We also define Cross Entropy as the loss function and Adam as the optimizer. The performance of these models is evaluated by calculating their Average Precision (AP) on the test set. The closer the value is to 1, the closer the network predictions are to the ground truth. As we have a lot of overlapping objects, we change the non-maximum suppression threshold for calculating the AP to 0.5 and making predictions to 0.3.
+
+For the leaf detection task, we developed a CNN based trained it on the training set. We use four different networks to compare: 
+- A simple object detector called ObjectDetectorMultiScale using hyperparameters batch size = 32, image size = 256, learning rate = 10-4, epochs = 35, and weight decay = 10-4. We used different experiments for this network:
+--	Using original data.
+--	Using augmented data.
+--	Using a variation of image size = [128, 256, 384]
+--	Using a variation of learning rate = [10-2, 10-3, 10-4]
+--	Using a variation of epochs = [20, 35, 50]
+--	Using a variation of weight decay = [10-2, 10-3, 10-4]
+-	ResNet18 using hyperparameters batch size = 32, image size = 128, learning rate = 10-4, epochs = 35, and weight decay = 10-4. We implement the model with and without freezing weights (FW)
+-	ResNet34 using hyperparameters batch size = 32, image size = 128, learning rate = 10-4, epochs = 35, and weight decay = 10-4. We implement the model with and without freezing weights (FW)
+-	VGG16 using hyperparameters batch size = 32, image size = 128, learning rate = 10-4, epochs = 35, and weight decay = 10-4. We implement the model with and without freezing weights (FW)
+-	
 We also define Cross Entropy as the loss function and Adam as the optimizer. The performance of these models is evaluated by calculating their Average Precision (AP) on the test set. The closer the value is to 1, the closer the network predictions are to the ground truth. As we have a lot of overlapping objects, we change the non-maximum suppression threshold for calculating the AP to 0.5 and making predictions to 0.3.
 
 ## Results and Discussions
