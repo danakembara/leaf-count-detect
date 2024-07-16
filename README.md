@@ -44,9 +44,9 @@ We also define Cross Entropy as the loss function and Adam as the optimizer. The
 The training of three models (AlexNet, pre-trained ResNet18, and pre-trained ResNet50) on the dataset was conducted using Python 3.6 and PyTorch on Google Colab. As described in the methods section, we employed data augmentation to mitigate the small size of our training data and avoid overfitting. Figure 1 illustrates the differences between original and augmented images. For experimental purposes, we separately trained the models on the original and augmented datasets, each taking between 0.5 to 1 hour to converge, as depicted in the training graphs shown in Figure 2. The Pearson correlation coefficient (r) was used to evaluate their performance.
 <p align="center">
   <img width="450" alt="image" src="https://github.com/user-attachments/assets/cd9b7616-d945-4faa-8715-ad58e64e2969">
-
+  <br>
   <img width="700" alt="image" src="https://github.com/user-attachments/assets/7665a469-b82e-4a04-864c-7dc3f9b8eb67">
-
+  <br>
   <img width="425" alt="image" src="https://github.com/user-attachments/assets/6e74c36f-82f9-426a-933c-1a34602645f2">
 </p>
 
@@ -60,11 +60,11 @@ In conclusion, our study employed various CNN models for leaf counting and found
 The training of various models (ObjectDetectorMultiScale, pre-trained ResNet18, ResNet34, VGG16) and their experiments were conducted using Python 3.6 and PyTorch on Google Colab. The training process took between 1 to 1.5 hours to converge. Data augmentation played a crucial role in improving Average Precision (AP) scores for models trained on small datasets. Authors in [2] proposed a data augmentation method that preserved the photorealistic appearance of plant leaves, which we implemented in our methods. 
 <p align="center">
   <img width="455" alt="image" src="https://github.com/user-attachments/assets/3696af08-6e78-4192-8c36-93e8d991613d">
-  
+  <br>
   <img width="442" alt="image" src="https://github.com/user-attachments/assets/5fb6b9a7-05f6-4c41-ad72-e38efb92bc2f">
-  
+  <br>
   <img width="368" alt="image" src="https://github.com/user-attachments/assets/eed8ff19-05d6-4aad-b80c-4e4521e58ab4">
-  
+  <br>
   <img width="259" alt="image" src="https://github.com/user-attachments/assets/03c1864d-bb87-457b-b235-6eae5bf3dfeb">
 </p>
 
