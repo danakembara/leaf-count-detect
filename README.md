@@ -5,7 +5,7 @@ Wageningen University & Research<br>
 
 ## Introduction
 Plant phenotype refers to the set of observable characteristics resulting from interactions between gene expression and the environment. Accurate and efficient monitoring of plant phenotypes is essential for intelligent production in plant cultivation, leading to better decision-making and higher yields. Traditional plant monitoring relies on manual measurements to analyze phenotypes, which are labor-intensive, time-consuming, and subject to observer bias. A better approach is to use image-based plant phenotyping with deep learning, allowing remote observation and reducing the effects of manual interference. Convolutional neural network (CNN)-based methods have been commonly applied to plant phenotyping, with related works such as [1] which used CNN for leaf counting, and [2][3] which used CNN for leaf detection.
-<br>
+
 In this project, we will use datasets from the Leaf Counting Challenge (LCC) and the Leaf Segmentation Challenge (LSC) to perform two tasks: leaf counting and leaf detection. We will compare and evaluate the performance of several architectures, including ObjectDetectorMultiScale, AlexNet, pre-trained ResNet18, pre-trained ResNet34, pre-trained ResNet50, and VGG16. Additionally, we will conduct experiments with data augmentation, varying hyperparameters, and Freezing Weights (FW) to enhance the robustness of the architectures and achieve the best performance for both tasks. Finally, we will compare our results with existing results from the literature.
 
 ## Methods
