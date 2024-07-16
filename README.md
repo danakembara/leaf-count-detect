@@ -77,7 +77,7 @@ Comparatively, ResNet18 and ResNet34 may perform better than YOLO in handling sm
 In conclusion, our study demonstrated the effectiveness of VGG16FW with data augmentation, achieving the highest AP score of 0.38 for leaf detection. Non-maximum Suppression (NMS) played a crucial role in improving model accuracy by distinguishing overlapping objects. Tuning the NMS threshold remains a critical parameter for training robust object detection models. Expanding data augmentation techniques and increasing dataset size are recommended for future research to further enhance model accuracy.
 
 ## References
-[1] Gomes, D. P. S., and L. Zheng. 2020. Recent data augmentation strategies for deep learning in plant phenotyping and their significance. engrxiv.org/t3q5p [online]
-[2] Buzzy, M.; Thesma, V.; Davoodi, M.; Mohammadpour Velni, J. 2020. Real-Time Plant Leaf Counting Using Deep Object Detection Networks. Sensors, 20, 6896. https://doi.org/10.3390/s20236896
-[3] Dmitry Kuznichov, Alon Zvirin, Yaron Honen, Ron Kimmel. 2019. Data Augmentation for Leaf Segmentation and Counting Tasks in Rosette Plants. Computer Vision and Pattern Recognition.  https://doi.org/10.48550/arXiv.1903.08583
+[1] Gomes, D. P. S., and L. Zheng. 2020. Recent data augmentation strategies for deep learning in plant phenotyping and their significance. engrxiv.org/t3q5p [online]  
+[2] Buzzy, M.; Thesma, V.; Davoodi, M.; Mohammadpour Velni, J. 2020. Real-Time Plant Leaf Counting Using Deep Object Detection Networks. Sensors, 20, 6896. https://doi.org/10.3390/s20236896  
+[3] Dmitry Kuznichov, Alon Zvirin, Yaron Honen, Ron Kimmel. 2019. Data Augmentation for Leaf Segmentation and Counting Tasks in Rosette Plants. Computer Vision and Pattern Recognition.  https://doi.org/10.48550/arXiv.1903.08583  
 [4] Poojary, R., R. Raina., and A. K. Mondal. 2021. Effect of data-augmentation on fine-tuned CNN model performance. International Journal of Artificial Intelligence, Volume 10, No. 1, pp. 84-92. https://doi.org/10.11591/ijai.v10.i1.pp84-92
