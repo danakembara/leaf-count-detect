@@ -61,11 +61,11 @@ The training of various models (ObjectDetectorMultiScale, pre-trained ResNet18, 
 <p align="center">
   <img width="650" alt="image" src="https://github.com/user-attachments/assets/3696af08-6e78-4192-8c36-93e8d991613d">
   <br>
-  <img width="500" alt="image" src="https://github.com/user-attachments/assets/5fb6b9a7-05f6-4c41-ad72-e38efb92bc2f">
+  <img width="650" alt="image" src="https://github.com/user-attachments/assets/5fb6b9a7-05f6-4c41-ad72-e38efb92bc2f">
   <br>
-  <img width="368" alt="image" src="https://github.com/user-attachments/assets/eed8ff19-05d6-4aad-b80c-4e4521e58ab4">
+  <img width="650" alt="image" src="https://github.com/user-attachments/assets/eed8ff19-05d6-4aad-b80c-4e4521e58ab4">
   <br>
-  <img width="259" alt="image" src="https://github.com/user-attachments/assets/03c1864d-bb87-457b-b235-6eae5bf3dfeb">
+  <img width="650" alt="image" src="https://github.com/user-attachments/assets/03c1864d-bb87-457b-b235-6eae5bf3dfeb">
 </p>
 
 Upon analyzing the images presented in Figure 3, it is evident that data augmentation was applied to the original dataset. The ObjectDetectorMultiScale model was trained on both original and augmented data. Our augmentation techniques included random cropping and brightness adjustments. In our leaf detection experiments using deep learning, we also explored various hyperparameters as summarized in Table 2, with results detailed in Figure 4 and Table 3. AP was used to evaluate model performance, and significant improvements were observed when using augmented data. Specifically, the model achieved an AP score of 0.37 with augmented data, compared to 0.33 with the original dataset, marking a 4% increase in performance.
