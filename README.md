@@ -63,7 +63,7 @@ The training of various models (ObjectDetectorMultiScale, pre-trained ResNet18, 
   <br>
   <img width="650" alt="image" src="https://github.com/user-attachments/assets/5fb6b9a7-05f6-4c41-ad72-e38efb92bc2f">
   <br>
-  <img width="750" alt="image" src="https://github.com/user-attachments/assets/eed8ff19-05d6-4aad-b80c-4e4521e58ab4">
+  <img width="725" alt="image" src="https://github.com/user-attachments/assets/eed8ff19-05d6-4aad-b80c-4e4521e58ab4">
   <br>
   <img width="450" alt="image" src="https://github.com/user-attachments/assets/03c1864d-bb87-457b-b235-6eae5bf3dfeb">
 </p>
