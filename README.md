@@ -19,7 +19,7 @@ Our source of datasets is ‘Ara2012’ and ‘Ara2013-Canon’ sets from the Le
 For the leaf counting task, we developed a CNN regression network using convolutional layers, pooling layers, and fully connected layers in the end and trained it on the training set. We use three different networks to compare: 
 -	AlexNet using hyperparameters batch size = 256, image size = 128, learning rate = 10-4, and epochs = 35 
 -	Fine-tuning the pre-trained ResNet18 using hyperparameters batch size = 256, image size = 128, learning rate = 5x10-5, and epochs = 50
--	Fine-tuning the pre-trained ResNet50 using hyperparameters batch size = 256, image size = 128, learning rate = 5x10-5, and epochs = 50  
+-	Fine-tuning the pre-trained ResNet50 using hyperparameters batch size = 256, image size = 128, learning rate = 5x10-5, and epochs = 50/
 We also define Mean Squared Error (MSE) as the loss function and Adam as the optimizer. As this is a regression task, the performance of these models is evaluated by calculating its Pearson correlation coefficient (r) on the test set. The closer the value is to 1 or -1, the closer the network predictions are to the ground truth.
 
 ### Task 2: Leaf Detection
