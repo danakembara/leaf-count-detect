@@ -59,9 +59,10 @@ In conclusion, we use several CNN variation models to do a leaf detection task a
 ## References
 
 ## Figures and Tables
-<img width="450" alt="image" src="https://github.com/user-attachments/assets/cd9b7616-d945-4faa-8715-ad58e64e2969"><br>
-
+<img width="450" alt="image" src="https://github.com/user-attachments/assets/cd9b7616-d945-4faa-8715-ad58e64e2969">
+<br>
 <img width="750" alt="image" src="https://github.com/user-attachments/assets/7665a469-b82e-4a04-864c-7dc3f9b8eb67">
-
+<br>
+<img width="455" alt="image" src="https://github.com/user-attachments/assets/3696af08-6e78-4192-8c36-93e8d991613d">
 
 
