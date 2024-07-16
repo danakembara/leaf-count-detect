@@ -16,7 +16,7 @@ Our datasets are sourced from the ‘Ara2012’ and ‘Ara2013-Canon’ sets fro
 - Applying a horizontal flip with a 50% probability
 
 ### Task 1: Leaf Counting
-For the leaf counting task, we developed a CNN regression network using convolutional layers, pooling layers, and fully connected layers at the end, and trained it on the training set. We use three different networks for comparison:
+For the leaf counting task, we developed a CNN regression network and trained it on the training set. We use three different networks for comparison:
 - AlexNet with hyperparameters: batch size = 256, image size = 128, learning rate = 10^-4, and epochs = 35
 - Fine-tuned ResNet18 with hyperparameters: batch size = 256, image size = 128, learning rate = 5x10^-5, and epochs = 50
 - Fine-tuned ResNet50 with hyperparameters: batch size = 256, image size = 128, learning rate = 5x10^-5, and epochs = 50
@@ -24,31 +24,18 @@ For the leaf counting task, we developed a CNN regression network using convolut
 We define Mean Squared Error (MSE) as the loss function and use Adam as the optimizer. As this is a regression task, the performance of these models is evaluated by calculating their Pearson correlation coefficient (r) on the test set. The closer the value is to 1 or -1, the closer the network predictions are to the ground truth.
 
 ### Task 2: Leaf Detection
-For the leaf detection task, we developed a CNN based trained it on the training set. We use four different networks to compare: 
-o	A simple object detector called ObjectDetectorMultiScale using hyperparameters batch size = 32, image size = 256, learning rate = 10-4, epochs = 35, and weight decay = 10-4. We used different experiments for this network:
--	Using original data.
--	Using augmented data.
--	Using a variation of image size = [128, 256, 384].
--	Using a variation of learning rate = [10-2, 10-3, 10-4].
--	Using a variation of epochs = [20, 35, 50].
--	Using a variation of weight decay = [10-2, 10-3, 10-4].
-o	ResNet18 using hyperparameters batch size = 32, image size = 128, learning rate = 10-4, epochs = 35, and weight decay = 10-4. We implement the model with and without freezing weights (FW).
-o	ResNet34 using hyperparameters batch size = 32, image size = 128, learning rate = 10-4, epochs = 35, and weight decay = 10-4. We implement the model with and without freezing weights (FW).
-o	VGG16 using hyperparameters batch size = 32, image size = 128, learning rate = 10-4, epochs = 35, and weight decay = 10-4. We implement the model with and without freezing weights (FW).
-We also define Cross Entropy as the loss function and Adam as the optimizer. The performance of these models is evaluated by calculating their Average Precision (AP) on the test set. The closer the value is to 1, the closer the network predictions are to the ground truth. As we have a lot of overlapping objects, we change the non-maximum suppression threshold for calculating the AP to 0.5 and making predictions to 0.3.
-
-For the leaf detection task, we developed a CNN based trained it on the training set. We use four different networks to compare: 
+For the leaf detection task, we developed a CNN detection network and trained it on the training set. We use four different networks for comparison: 
 - A simple object detector called ObjectDetectorMultiScale using hyperparameters batch size = 32, image size = 256, learning rate = 10-4, epochs = 35, and weight decay = 10-4. We used different experiments for this network:
---	Using original data.
---	Using augmented data.
---	Using a variation of image size = [128, 256, 384]
---	Using a variation of learning rate = [10-2, 10-3, 10-4]
---	Using a variation of epochs = [20, 35, 50]
---	Using a variation of weight decay = [10-2, 10-3, 10-4]
+  - Using original data.
+  - Using augmented data.
+  - Using a variation of image size = [128, 256, 384]
+  - Using a variation of learning rate = [10-2, 10-3, 10-4]
+  - Using a variation of epochs = [20, 35, 50]
+  - Using a variation of weight decay = [10-2, 10-3, 10-4]
 -	ResNet18 using hyperparameters batch size = 32, image size = 128, learning rate = 10-4, epochs = 35, and weight decay = 10-4. We implement the model with and without freezing weights (FW)
 -	ResNet34 using hyperparameters batch size = 32, image size = 128, learning rate = 10-4, epochs = 35, and weight decay = 10-4. We implement the model with and without freezing weights (FW)
 -	VGG16 using hyperparameters batch size = 32, image size = 128, learning rate = 10-4, epochs = 35, and weight decay = 10-4. We implement the model with and without freezing weights (FW)
--	
+
 We also define Cross Entropy as the loss function and Adam as the optimizer. The performance of these models is evaluated by calculating their Average Precision (AP) on the test set. The closer the value is to 1, the closer the network predictions are to the ground truth. As we have a lot of overlapping objects, we change the non-maximum suppression threshold for calculating the AP to 0.5 and making predictions to 0.3.
 
 ## Results and Discussions
