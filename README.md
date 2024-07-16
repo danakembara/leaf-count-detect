@@ -41,12 +41,13 @@ We also define Cross Entropy as the loss function and Adam as the optimizer. The
 ## Results, Discussions, and Conclusions
 ### Task 1: Leaf Counting
 The training of three models (AlexNet, pre-trained ResNet18, and pre-trained ResNet50) on the dataset was conducted using Python 3.6 and PyTorch on Google Colab. As described in the methods section, we employed data augmentation to mitigate the small size of our training data and avoid overfitting. Figure 1 illustrates the differences between original and augmented images. For experimental purposes, we separately trained the models on the original and augmented datasets, each taking between 0.5 to 1 hour to converge, as depicted in the training graphs shown in Figure 2. The Pearson correlation coefficient (r) was used to evaluate their performance.
-<img width="450" alt="image" src="https://github.com/user-attachments/assets/cd9b7616-d945-4faa-8715-ad58e64e2969">
-<br>
-<img width="450" alt="image" src="https://github.com/user-attachments/assets/7665a469-b82e-4a04-864c-7dc3f9b8eb67">
-<br>
-<img width="450" alt="image" src="https://github.com/user-attachments/assets/6e74c36f-82f9-426a-933c-1a34602645f2">
-<br>
+<p align="center">
+  <img width="450" alt="image" src="https://github.com/user-attachments/assets/cd9b7616-d945-4faa-8715-ad58e64e2969">
+  <br>
+  <img width="450" alt="image" src="https://github.com/user-attachments/assets/7665a469-b82e-4a04-864c-7dc3f9b8eb67">
+  <br>
+  <img width="450" alt="image" src="https://github.com/user-attachments/assets/6e74c36f-82f9-426a-933c-1a34602645f2">
+</p>
 Results from Table 1 demonstrate that AlexNet achieved the best performance using the augmented dataset with r = 0.76, showing an improvement over AlexNet trained on the original dataset with r = 0.74. This enhancement can be attributed to the effective application of data augmentation techniques. Previous studies by [1] using the LSC and LCC datasets also reported a similar improvement of 2% after employing data augmentation. However, it is important to note that the effectiveness of data augmentation can be context-specific. For instance, Table 1 reveals that ResNet50 performed better with the original dataset than with the augmented one. According to [1], while data augmentation generally enhances model generalization, its impact can vary based on the model's characteristics and dataset specifics. Nevertheless, our observation also indicates that ResNet50 trained with the augmented dataset converges faster, as shown in Figure 2. When considering inference time along with performance metrics, using augmented data proves advantageous over the original dataset. Furthermore, future experiments with additional training images, varied data augmentation techniques, or adjusted hyperparameters may alter these results. 
 
 Moreover, Table 1 shows that AlexNet outperforms both pre-trained ResNet18 and ResNet50. Unlike AlexNet, ResNet models were initialized with weights from the ImageNet dataset and fine-tuned on our task-specific dataset. This approach leverages transfer learning to mitigate the challenges posed by small training datasets. However, as noted by [4], modifying pre-trained models for specific tasks can sometimes lead to decreased performance due to alterations in model architecture. In our case, modifying the last layer of ResNet models for regression tasks might explain why AlexNet exhibits superior performance.
