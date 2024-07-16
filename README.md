@@ -1,6 +1,8 @@
 # Leaf Counting and Detection
 Deep Learning Course (GRS-4806)  
-Wageningen University <br>
+Dana Putra Kembara and Efraim Manurung  
+Wageningen University & Research  
+2023<br>
 <img src="https://github.com/user-attachments/assets/dc47b632-9e38-41ce-941c-2f0d9f36f82a" alt="image" width="750"/>
 
 ## Introduction
