@@ -13,15 +13,15 @@ In this project, we will use datasets from Leaf Counting Challenge (LCC) and Lea
 ## Methods
 ### Dataset
 Our source of datasets is ‘Ara2012’ and ‘Ara2013-Canon’ sets from the Leaf Segmentation Challenge (LSC) and Leaf Counting Challenge (LCC) that contain top-down images of Arabidopsis plants and ground-truth annotations. One of the main challenges is we don’t have enough data to train on. The original dataset only contains roughly 150 images for the training set and 50 for the test set. We use the data augmentation technique to increase our dataset artificially to avoid overfitting. The augmented dataset is made by: 
-o	Randomly cropping an area of 70% to 90% of the original size, and the ratio of width to height of the region is randomly selected from between 1 and 2.
-o	Randomly change the brightness and saturation of the image to a value between 80% to 90% with a contrast of 150% of the original images.
-o	A horizontal flip is applied with a 50% probability.
+-	Randomly cropping an area of 70% to 90% of the original size, and the ratio of width to height of the region is randomly selected from between 1 and 2.
+-	Randomly change the brightness and saturation of the image to a value between 80% to 90% with a contrast of 150% of the original images.
+-	A horizontal flip is applied with a 50% probability.
 
 ### Task 1: Leaf Counting
 For the leaf counting task, we developed a CNN regression network using convolutional layers, pooling layers, and fully connected layers in the end and trained it on the training set. We use three different networks to compare: 
-o	AlexNet using hyperparameters batch size = 256, image size = 128, learning rate = 10-4, and epochs = 35. 
-o	Fine-tuning the pre-trained ResNet18 using hyperparameters batch size = 256, image size = 128, learning rate = 5x10-5, and epochs = 50.
-o	Fine-tuning the pre-trained ResNet50 using hyperparameters batch size = 256, image size = 128, learning rate = 5x10-5, and epochs = 50.
+-	AlexNet using hyperparameters batch size = 256, image size = 128, learning rate = 10-4, and epochs = 35. 
+-	Fine-tuning the pre-trained ResNet18 using hyperparameters batch size = 256, image size = 128, learning rate = 5x10-5, and epochs = 50.
+-	Fine-tuning the pre-trained ResNet50 using hyperparameters batch size = 256, image size = 128, learning rate = 5x10-5, and epochs = 50.
 We also define Mean Squared Error (MSE) as the loss function and Adam as the optimizer. As this is a regression task, the performance of these models is evaluated by calculating its Pearson correlation coefficient (r) on the test set. The closer the value is to 1 or -1, the closer the network predictions are to the ground truth.
 
 ### Task 2: Leaf Detection
