@@ -82,8 +82,3 @@ In leaf detection task, our study demonstrated the effectiveness of VGG16FW with
 [3] Dmitry Kuznichov, Alon Zvirin, Yaron Honen, Ron Kimmel. 2019. Data Augmentation for Leaf Segmentation and Counting Tasks in Rosette Plants. Computer Vision and Pattern Recognition.  https://doi.org/10.48550/arXiv.1903.08583  
 [4] Poojary, R., R. Raina., and A. K. Mondal. 2021. Effect of data-augmentation on fine-tuned CNN model performance. International Journal of Artificial Intelligence, Volume 10, No. 1, pp. 84-92. https://doi.org/10.11591/ijai.v10.i1.pp84-92
 
-## Appendices
-<p align="center">
-  <img width="500" alt="image" src="https://github.com/user-attachments/assets/4841e790-f89c-4772-8a45-0a9a1dad6529">
-</p>
-
