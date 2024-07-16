@@ -72,12 +72,18 @@ The highest AP of 0.32 was achieved using the original dataset without augmentat
 Comparatively, ResNet18 and ResNet34 may perform better than YOLO in handling small leaf datasets, given their lower computational cost and suitability for image classification tasks [3]. However, YOLO's design specifically for object detection may offer superior performance in detecting small objects like leaves. Our experiments faced limitations, particularly due to the small dataset size, which may have constrained our models' ability to learn complex features. Additionally, limited GPU resources prevented us from deploying more complex models such as ResNet50, potentially affecting the accuracy of the VGG16FW model.
 
 ## Conclusions
-For leaf counting task, our study employed various CNN models and found that AlexNet achieved the highest performance with r = 0.76 when augmented data was used. Data augmentation proved effective in enhancing performance, especially with limited training data. However, the choice of data augmentation techniques can significantly impact results, and the adaptability of different models should be considered for optimal performance in specific tasks. Future research should focus on refining data augmentation strategies, exploring alternative models, and expanding training datasets with new images.
+In leaf counting task, our study employed various CNN models and found that AlexNet achieved the highest performance with r = 0.76 when augmented data was used. Data augmentation proved effective in enhancing performance, especially with limited training data. However, the choice of data augmentation techniques can significantly impact results, and the adaptability of different models should be considered for optimal performance in specific tasks. Future research should focus on refining data augmentation strategies, exploring alternative models, and expanding training datasets with new images.
 
-For leaf detection task, our study demonstrated the effectiveness of VGG16FW with data augmentation, achieving the highest AP score of 0.38 for leaf detection. Non-maximum Suppression (NMS) played a crucial role in improving model accuracy by distinguishing overlapping objects. Tuning the NMS threshold remains a critical parameter for training robust object detection models. Expanding data augmentation techniques and increasing dataset size are recommended for future research to further enhance model accuracy.
+In leaf detection task, our study demonstrated the effectiveness of VGG16FW with data augmentation, achieving the highest AP score of 0.38 for leaf detection. Non-maximum Suppression (NMS) played a crucial role in improving model accuracy by distinguishing overlapping objects. Tuning the NMS threshold remains a critical parameter for training robust object detection models. Expanding data augmentation techniques and increasing dataset size are recommended for future research to further enhance model accuracy.
 
 ## References
 [1] Gomes, D. P. S., and L. Zheng. 2020. Recent data augmentation strategies for deep learning in plant phenotyping and their significance. engrxiv.org/t3q5p [online]  
 [2] Buzzy, M.; Thesma, V.; Davoodi, M.; Mohammadpour Velni, J. 2020. Real-Time Plant Leaf Counting Using Deep Object Detection Networks. Sensors, 20, 6896. https://doi.org/10.3390/s20236896  
 [3] Dmitry Kuznichov, Alon Zvirin, Yaron Honen, Ron Kimmel. 2019. Data Augmentation for Leaf Segmentation and Counting Tasks in Rosette Plants. Computer Vision and Pattern Recognition.  https://doi.org/10.48550/arXiv.1903.08583  
 [4] Poojary, R., R. Raina., and A. K. Mondal. 2021. Effect of data-augmentation on fine-tuned CNN model performance. International Journal of Artificial Intelligence, Volume 10, No. 1, pp. 84-92. https://doi.org/10.11591/ijai.v10.i1.pp84-92
+
+## Appendices
+<p align="center">
+  <img width="900" alt="image" src="https://github.com/user-attachments/assets/4841e790-f89c-4772-8a45-0a9a1dad6529">
+</p>
+
