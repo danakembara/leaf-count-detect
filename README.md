@@ -1,7 +1,7 @@
 # Leaf Counting and Detection
 Deep Learning Course (GRS-4806)  
 Wageningen University
-<img src="https://github.com/user-attachments/assets/dc47b632-9e38-41ce-941c-2f0d9f36f82a" alt="image" width="1000"/>
+<img src="https://github.com/user-attachments/assets/dc47b632-9e38-41ce-941c-2f0d9f36f82a" alt="image" width="800"/>
 
 ## Introduction
 Plant phenotype refers to the set of observable characteristics resulting from interactions between gene expression and the environment. Accurate and efficient monitoring of plant phenotypes is essential for intelligent production in plant cultivation, leading to better decision-making and higher yields. Traditional plant monitoring relies on manual measurements to analyze phenotypes, which are labor-intensive, time-consuming, and subject to observer bias. A better approach is to use image-based plant phenotyping with deep learning, allowing remote observation and reducing the effects of manual interference. Convolutional neural network (CNN)-based methods have been commonly applied to plant phenotyping, with related works such as [1] which used CNN for leaf counting, and [2][3] which used CNN for leaf detection.
