@@ -84,6 +84,6 @@ In leaf detection task, our study demonstrated the effectiveness of VGG16FW with
 
 ## Appendices
 <p align="center">
-  <img width="900" alt="image" src="https://github.com/user-attachments/assets/4841e790-f89c-4772-8a45-0a9a1dad6529">
+  <img width="500" alt="image" src="https://github.com/user-attachments/assets/4841e790-f89c-4772-8a45-0a9a1dad6529">
 </p>
 
